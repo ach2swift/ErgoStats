@@ -33,12 +33,12 @@ struct AboutView: View {
                     
                 }
                 Section("Creator") {
-                    VStack{
+                    VStack(alignment: .leading, spacing: 10){
                         Text("Created by Alin Chitas, 2023")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.bottom, 10)
-                        Text("The project is open source software")
-                            .frame(maxWidth: .infinity, alignment: .leading)
+                        HStack{
+                            Text("The project is")
+                            Link("open source software", destination: URL(string: "https://github.com/ach2swift/ErgoStats")!)
+                        }
                     }
                 }
                 Section("Contact") {
