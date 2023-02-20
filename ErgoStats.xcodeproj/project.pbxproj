@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		310FC776299B4F6100BD5B5C /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310FC775299B4F6100BD5B5C /* TransactionsViewModel.swift */; };
+		310FC778299BE2D800BD5B5C /* UTXOViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310FC777299BE2D800BD5B5C /* UTXOViewModel.swift */; };
+		310FC77A299BEAAD00BD5B5C /* AddressesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310FC779299BEAAD00BD5B5C /* AddressesViewModel.swift */; };
+		310FC77C299D426C00BD5B5C /* ContractsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310FC77B299D426C00BD5B5C /* ContractsViewModel.swift */; };
+		31206CEA2996513A00D610DB /* FetchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31206CE92996513A00D610DB /* FetchError.swift */; };
+		31235F67298D0657009F7871 /* ErgoStatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31235F66298D0657009F7871 /* ErgoStatsApp.swift */; };
+		31235F69298D0657009F7871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31235F68298D0657009F7871 /* ContentView.swift */; };
+		31235F6B298D0658009F7871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31235F6A298D0658009F7871 /* Assets.xcassets */; };
+		31235F6E298D0658009F7871 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31235F6D298D0658009F7871 /* Preview Assets.xcassets */; };
+		31235F75298D0784009F7871 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31235F74298D0784009F7871 /* HomeView.swift */; };
+		31235F77298D0886009F7871 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31235F76298D0886009F7871 /* Model.swift */; };
+		31235F79298D08A8009F7871 /* RichListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31235F78298D08A8009F7871 /* RichListView.swift */; };
+		31235F80298D0E5D009F7871 /* RankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31235F7F298D0E5D009F7871 /* RankView.swift */; };
+		31235F85298D4768009F7871 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 31235F84298D4768009F7871 /* ConfettiSwiftUI */; };
+		313815CE299D4A79002C05F0 /* MiningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313815CD299D4A79002C05F0 /* MiningViewModel.swift */; };
+		313815D3299E49A3002C05F0 /* DistributionP2PK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313815D2299E49A3002C05F0 /* DistributionP2PK.swift */; };
+		313815D5299E4D8F002C05F0 /* DistributionContractsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313815D4299E4D8F002C05F0 /* DistributionContractsView.swift */; };
+		313815DA299F9B07002C05F0 /* AgeUSDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313815D9299F9B07002C05F0 /* AgeUSDViewModel.swift */; };
+		313815DC299F9BAE002C05F0 /* AgeUsdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313815DB299F9BAE002C05F0 /* AgeUsdView.swift */; };
+		313815DE299FACFE002C05F0 /* AgeUsdCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313815DD299FACFE002C05F0 /* AgeUsdCardView.swift */; };
+		3157D839299612410077B58E /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157D838299612410077B58E /* VolumeView.swift */; };
+		3157D84029962FEB0077B58E /* RankHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157D83F29962FEB0077B58E /* RankHintView.swift */; };
+		31F6318B298F9A5A00C85000 /* RankCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F6318A298F9A5A00C85000 /* RankCardView.swift */; };
+		31F6318D298FA19100C85000 /* RankLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F6318C298FA19100C85000 /* RankLegendView.swift */; };
+		31F6318F29921FBC00C85000 /* RichListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F6318E29921FBC00C85000 /* RichListViewModel.swift */; };
+		31F631912992218000C85000 /* RankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F631902992218000C85000 /* RankViewModel.swift */; };
+		31F63193299221ED00C85000 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F63192299221ED00C85000 /* HomeViewModel.swift */; };
+		31F631952992284F00C85000 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F631942992284F00C85000 /* SplashScreenView.swift */; };
+		31F6319729925CBA00C85000 /* StatisticsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F6319629925CBA00C85000 /* StatisticsModel.swift */; };
+		31F6319A29925D5D00C85000 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F6319929925D5D00C85000 /* StatisticView.swift */; };
+		31F6319F299263E900C85000 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F6319E299263E900C85000 /* Extensions.swift */; };
+		31F631A22992A78000C85000 /* MetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F631A12992A78000C85000 /* MetricsView.swift */; };
+		31F631A42992A8D800C85000 /* MetricsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F631A32992A8D800C85000 /* MetricsViewModel.swift */; };
+		31F631A62993BC2B00C85000 /* MetricsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F631A52993BC2B00C85000 /* MetricsCardView.swift */; };
+		31F631A82993C14500C85000 /* EmmisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F631A72993C14500C85000 /* EmmisionView.swift */; };
+		31F631AB2994CDFC00C85000 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F631AA2994CDFC00C85000 /* AboutView.swift */; };
+		31F631AD2994D06B00C85000 /* P2PKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F631AC2994D06B00C85000 /* P2PKView.swift */; };
+		31F631AF2994DB5600C85000 /* ContractsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F631AE2994DB5600C85000 /* ContractsView.swift */; };
+		31F631B12994DB6300C85000 /* MinersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F631B02994DB6300C85000 /* MinersView.swift */; };
+		31F631B72995181C00C85000 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F631B62995181C00C85000 /* TransactionsView.swift */; };
+		31F631B92995183000C85000 /* UtxosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F631B82995183000C85000 /* UtxosView.swift */; };
+		31F631BB2995262100C85000 /* VolumeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F631BA2995262100C85000 /* VolumeViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		310FC775299B4F6100BD5B5C /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
+		310FC777299BE2D800BD5B5C /* UTXOViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTXOViewModel.swift; sourceTree = "<group>"; };
+		310FC779299BEAAD00BD5B5C /* AddressesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesViewModel.swift; sourceTree = "<group>"; };
+		310FC77B299D426C00BD5B5C /* ContractsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsViewModel.swift; sourceTree = "<group>"; };
+		31206CE92996513A00D610DB /* FetchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchError.swift; sourceTree = "<group>"; };
+		31235F63298D0657009F7871 /* ErgoStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ErgoStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		31235F66298D0657009F7871 /* ErgoStatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErgoStatsApp.swift; sourceTree = "<group>"; };
+		31235F68298D0657009F7871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		31235F6A298D0658009F7871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		31235F6D298D0658009F7871 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		31235F74298D0784009F7871 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		31235F76298D0886009F7871 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		31235F78298D08A8009F7871 /* RichListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichListView.swift; sourceTree = "<group>"; };
+		31235F7F298D0E5D009F7871 /* RankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankView.swift; sourceTree = "<group>"; };
+		313815CD299D4A79002C05F0 /* MiningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiningViewModel.swift; sourceTree = "<group>"; };
+		313815D2299E49A3002C05F0 /* DistributionP2PK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionP2PK.swift; sourceTree = "<group>"; };
+		313815D4299E4D8F002C05F0 /* DistributionContractsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionContractsView.swift; sourceTree = "<group>"; };
+		313815D6299F48CC002C05F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		313815D9299F9B07002C05F0 /* AgeUSDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeUSDViewModel.swift; sourceTree = "<group>"; };
+		313815DB299F9BAE002C05F0 /* AgeUsdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeUsdView.swift; sourceTree = "<group>"; };
+		313815DD299FACFE002C05F0 /* AgeUsdCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeUsdCardView.swift; sourceTree = "<group>"; };
+		3157D838299612410077B58E /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
+		3157D83F29962FEB0077B58E /* RankHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankHintView.swift; sourceTree = "<group>"; };
+		31F6318A298F9A5A00C85000 /* RankCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCardView.swift; sourceTree = "<group>"; };
+		31F6318C298FA19100C85000 /* RankLegendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankLegendView.swift; sourceTree = "<group>"; };
+		31F6318E29921FBC00C85000 /* RichListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichListViewModel.swift; sourceTree = "<group>"; };
+		31F631902992218000C85000 /* RankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewModel.swift; sourceTree = "<group>"; };
+		31F63192299221ED00C85000 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		31F631942992284F00C85000 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		31F6319629925CBA00C85000 /* StatisticsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsModel.swift; sourceTree = "<group>"; };
+		31F6319929925D5D00C85000 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		31F6319E299263E900C85000 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		31F631A12992A78000C85000 /* MetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsView.swift; sourceTree = "<group>"; };
+		31F631A32992A8D800C85000 /* MetricsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewModel.swift; sourceTree = "<group>"; };
+		31F631A52993BC2B00C85000 /* MetricsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsCardView.swift; sourceTree = "<group>"; };
+		31F631A72993C14500C85000 /* EmmisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmmisionView.swift; sourceTree = "<group>"; };
+		31F631AA2994CDFC00C85000 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		31F631AC2994D06B00C85000 /* P2PKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P2PKView.swift; sourceTree = "<group>"; };
+		31F631AE2994DB5600C85000 /* ContractsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsView.swift; sourceTree = "<group>"; };
+		31F631B02994DB6300C85000 /* MinersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinersView.swift; sourceTree = "<group>"; };
+		31F631B62995181C00C85000 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		31F631B82995183000C85000 /* UtxosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtxosView.swift; sourceTree = "<group>"; };
+		31F631BA2995262100C85000 /* VolumeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		31235F60298D0657009F7871 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31235F85298D4768009F7871 /* ConfettiSwiftUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31206CE82996512200D610DB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				31206CE92996513A00D610DB /* FetchError.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		31235F5A298D0657009F7871 = {
+			isa = PBXGroup;
+			children = (
+				31235F65298D0657009F7871 /* ErgoStats */,
+				31235F64298D0657009F7871 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		31235F64298D0657009F7871 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31235F63298D0657009F7871 /* ErgoStats.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31235F65298D0657009F7871 /* ErgoStats */ = {
+			isa = PBXGroup;
+			children = (
+				313815D6299F48CC002C05F0 /* Info.plist */,
+				31235F66298D0657009F7871 /* ErgoStatsApp.swift */,
+				31206CE82996512200D610DB /* Utils */,
+				31F631A02992688A00C85000 /* Extensions */,
+				31F6319829925D3300C85000 /* Components */,
+				31235F7E298D0B8A009F7871 /* ViewModel */,
+				31235F7D298D0B6F009F7871 /* Views */,
+				31235F7C298D0B5A009F7871 /* Model */,
+				31235F6A298D0658009F7871 /* Assets.xcassets */,
+				31235F6C298D0658009F7871 /* Preview Content */,
+			);
+			path = ErgoStats;
+			sourceTree = "<group>";
+		};
+		31235F6C298D0658009F7871 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				31235F6D298D0658009F7871 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		31235F7C298D0B5A009F7871 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				31235F76298D0886009F7871 /* Model.swift */,
+				31F6319629925CBA00C85000 /* StatisticsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		31235F7D298D0B6F009F7871 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				31235F68298D0657009F7871 /* ContentView.swift */,
+				3157D83E29962FA40077B58E /* Rank */,
+				31F631A92994C83000C85000 /* Metrics */,
+				31F631942992284F00C85000 /* SplashScreenView.swift */,
+				31F631A12992A78000C85000 /* MetricsView.swift */,
+				31235F74298D0784009F7871 /* HomeView.swift */,
+				313815DB299F9BAE002C05F0 /* AgeUsdView.swift */,
+				31235F78298D08A8009F7871 /* RichListView.swift */,
+				31F631AA2994CDFC00C85000 /* AboutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		31235F7E298D0B8A009F7871 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				31F63192299221ED00C85000 /* HomeViewModel.swift */,
+				31F631902992218000C85000 /* RankViewModel.swift */,
+				31F6318E29921FBC00C85000 /* RichListViewModel.swift */,
+				31F631A32992A8D800C85000 /* MetricsViewModel.swift */,
+				31F631BA2995262100C85000 /* VolumeViewModel.swift */,
+				310FC775299B4F6100BD5B5C /* TransactionsViewModel.swift */,
+				310FC777299BE2D800BD5B5C /* UTXOViewModel.swift */,
+				310FC779299BEAAD00BD5B5C /* AddressesViewModel.swift */,
+				310FC77B299D426C00BD5B5C /* ContractsViewModel.swift */,
+				313815CD299D4A79002C05F0 /* MiningViewModel.swift */,
+				313815D9299F9B07002C05F0 /* AgeUSDViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		313815D1299E4978002C05F0 /* SupplyDistribution */ = {
+			isa = PBXGroup;
+			children = (
+				313815D2299E49A3002C05F0 /* DistributionP2PK.swift */,
+				313815D4299E4D8F002C05F0 /* DistributionContractsView.swift */,
+			);
+			path = SupplyDistribution;
+			sourceTree = "<group>";
+		};
+		3157D83E29962FA40077B58E /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+				31235F7F298D0E5D009F7871 /* RankView.swift */,
+				31F6318C298FA19100C85000 /* RankLegendView.swift */,
+				3157D83F29962FEB0077B58E /* RankHintView.swift */,
+			);
+			path = Rank;
+			sourceTree = "<group>";
+		};
+		31F6319829925D3300C85000 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				31F6319929925D5D00C85000 /* StatisticView.swift */,
+				31F631A52993BC2B00C85000 /* MetricsCardView.swift */,
+				31F6318A298F9A5A00C85000 /* RankCardView.swift */,
+				313815DD299FACFE002C05F0 /* AgeUsdCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		31F631A02992688A00C85000 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				31F6319E299263E900C85000 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		31F631A92994C83000C85000 /* Metrics */ = {
+			isa = PBXGroup;
+			children = (
+				313815D1299E4978002C05F0 /* SupplyDistribution */,
+				31F631B2299514CA00C85000 /* Addresses */,
+				31F631B3299517F000C85000 /* Usage */,
+				31F631A72993C14500C85000 /* EmmisionView.swift */,
+			);
+			path = Metrics;
+			sourceTree = "<group>";
+		};
+		31F631B2299514CA00C85000 /* Addresses */ = {
+			isa = PBXGroup;
+			children = (
+				31F631AC2994D06B00C85000 /* P2PKView.swift */,
+				31F631AE2994DB5600C85000 /* ContractsView.swift */,
+				31F631B02994DB6300C85000 /* MinersView.swift */,
+			);
+			path = Addresses;
+			sourceTree = "<group>";
+		};
+		31F631B3299517F000C85000 /* Usage */ = {
+			isa = PBXGroup;
+			children = (
+				31F631B62995181C00C85000 /* TransactionsView.swift */,
+				31F631B82995183000C85000 /* UtxosView.swift */,
+				3157D838299612410077B58E /* VolumeView.swift */,
+			);
+			path = Usage;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		31235F62298D0657009F7871 /* ErgoStats */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31235F71298D0658009F7871 /* Build configuration list for PBXNativeTarget "ErgoStats" */;
+			buildPhases = (
+				31235F5F298D0657009F7871 /* Sources */,
+				31235F60298D0657009F7871 /* Frameworks */,
+				31235F61298D0657009F7871 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ErgoStats;
+			packageProductDependencies = (
+				31235F84298D4768009F7871 /* ConfettiSwiftUI */,
+			);
+			productName = ErgoStats;
+			productReference = 31235F63298D0657009F7871 /* ErgoStats.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		31235F5B298D0657009F7871 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					31235F62298D0657009F7871 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 31235F5E298D0657009F7871 /* Build configuration list for PBXProject "ErgoStats" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 31235F5A298D0657009F7871;
+			packageReferences = (
+				31235F83298D4768009F7871 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
+			productRefGroup = 31235F64298D0657009F7871 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				31235F62298D0657009F7871 /* ErgoStats */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		31235F61298D0657009F7871 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31235F6E298D0658009F7871 /* Preview Assets.xcassets in Resources */,
+				31235F6B298D0658009F7871 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31235F5F298D0657009F7871 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31F631B72995181C00C85000 /* TransactionsView.swift in Sources */,
+				310FC77C299D426C00BD5B5C /* ContractsViewModel.swift in Sources */,
+				313815CE299D4A79002C05F0 /* MiningViewModel.swift in Sources */,
+				310FC776299B4F6100BD5B5C /* TransactionsViewModel.swift in Sources */,
+				31F631A42992A8D800C85000 /* MetricsViewModel.swift in Sources */,
+				31235F80298D0E5D009F7871 /* RankView.swift in Sources */,
+				31235F75298D0784009F7871 /* HomeView.swift in Sources */,
+				31F6319729925CBA00C85000 /* StatisticsModel.swift in Sources */,
+				31F631AB2994CDFC00C85000 /* AboutView.swift in Sources */,
+				31F631A62993BC2B00C85000 /* MetricsCardView.swift in Sources */,
+				31F631AF2994DB5600C85000 /* ContractsView.swift in Sources */,
+				31F6318F29921FBC00C85000 /* RichListViewModel.swift in Sources */,
+				31235F79298D08A8009F7871 /* RichListView.swift in Sources */,
+				31F631912992218000C85000 /* RankViewModel.swift in Sources */,
+				313815DA299F9B07002C05F0 /* AgeUSDViewModel.swift in Sources */,
+				3157D84029962FEB0077B58E /* RankHintView.swift in Sources */,
+				31235F69298D0657009F7871 /* ContentView.swift in Sources */,
+				313815D3299E49A3002C05F0 /* DistributionP2PK.swift in Sources */,
+				31206CEA2996513A00D610DB /* FetchError.swift in Sources */,
+				31F631B12994DB6300C85000 /* MinersView.swift in Sources */,
+				31F6319A29925D5D00C85000 /* StatisticView.swift in Sources */,
+				313815DC299F9BAE002C05F0 /* AgeUsdView.swift in Sources */,
+				3157D839299612410077B58E /* VolumeView.swift in Sources */,
+				313815DE299FACFE002C05F0 /* AgeUsdCardView.swift in Sources */,
+				31F6318D298FA19100C85000 /* RankLegendView.swift in Sources */,
+				31F63193299221ED00C85000 /* HomeViewModel.swift in Sources */,
+				31F6319F299263E900C85000 /* Extensions.swift in Sources */,
+				31F631B92995183000C85000 /* UtxosView.swift in Sources */,
+				31F631BB2995262100C85000 /* VolumeViewModel.swift in Sources */,
+				31F631AD2994D06B00C85000 /* P2PKView.swift in Sources */,
+				31235F67298D0657009F7871 /* ErgoStatsApp.swift in Sources */,
+				31F631A82993C14500C85000 /* EmmisionView.swift in Sources */,
+				31F6318B298F9A5A00C85000 /* RankCardView.swift in Sources */,
+				313815D5299E4D8F002C05F0 /* DistributionContractsView.swift in Sources */,
+				310FC778299BE2D800BD5B5C /* UTXOViewModel.swift in Sources */,
+				31235F77298D0886009F7871 /* Model.swift in Sources */,
+				310FC77A299BEAAD00BD5B5C /* AddressesViewModel.swift in Sources */,
+				31F631A22992A78000C85000 /* MetricsView.swift in Sources */,
+				31F631952992284F00C85000 /* SplashScreenView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		31235F6F298D0658009F7871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		31235F70298D0658009F7871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		31235F72298D0658009F7871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ErgoStats/Preview Content\"";
+				DEVELOPMENT_TEAM = 85D9J8Z8JT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ErgoStats/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ergo Stats";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alinchitas.ErgoStats;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		31235F73298D0658009F7871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ErgoStats/Preview Content\"";
+				DEVELOPMENT_TEAM = 85D9J8Z8JT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ErgoStats/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ergo Stats";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alinchitas.ErgoStats;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		31235F5E298D0657009F7871 /* Build configuration list for PBXProject "ErgoStats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31235F6F298D0658009F7871 /* Debug */,
+				31235F70298D0658009F7871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31235F71298D0658009F7871 /* Build configuration list for PBXNativeTarget "ErgoStats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31235F72298D0658009F7871 /* Debug */,
+				31235F73298D0658009F7871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		31235F83298D4768009F7871 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		31235F84298D4768009F7871 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 31235F83298D4768009F7871 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 31235F5B298D0657009F7871 /* Project object */;
+}
