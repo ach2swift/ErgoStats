@@ -32,4 +32,4 @@ https://www.coingecko.com
 https://www.ergo.watch
 
 **Tip jar**
-If you enjoy the app and you wish to support my work, you can do so at:
+If you enjoy the app and you wish to support my work, you can do so at: 9eZnPikaTarrFakrn3nzwSnqgzZr47Vf6KLAp79stoBcDvATQcx
