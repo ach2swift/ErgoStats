@@ -20,8 +20,11 @@ struct RichListView: View {
                 ForEach(viewModel.richList, id: \.address) { richRow in
                     HStack {
                         VStack(alignment: .leading) {
-                            Text(richRow.address.prefix(6))
-                                .font(.headline)
+                            HStack {
+                                Text("\(viewModel.richList.firstIndex(where: {$0.address == richRow.address})! + 1).")
+                                Text(richRow.address.prefix(6))
+                                    .font(.headline)
+                            }
                             Text("\(richRow.balance / 1_000_000_000) ERG") //nanoERG to ERG
                         }
                         Spacer()

@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct SplashScreenView: View {
+    @EnvironmentObject var network: NetworkMonitor
+
     @State private var isActive = false
     @State private var size = 0.8
     @State private var opacity = 0.5
     
     var body: some View {
         if isActive {
-            ContentView()
+            if network.isActive {
+                ContentView()
+            } else {
+                NoInternetView()
+            }
         } else {
             ZStack {
                 VStack {

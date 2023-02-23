@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 @MainActor class MetricsViewModel: ObservableObject {
     @Published var supply = ""
