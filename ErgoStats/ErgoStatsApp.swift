@@ -11,13 +11,12 @@ import SwiftUI
 struct ErgoStatsApp: App {
     @AppStorage("isDarkMode") private var isDarkMode = true
     
+    @StateObject var network = NetworkMonitor()
     @StateObject var vm = HomeViewModel()
     @StateObject var vmMetrics = MetricsViewModel()
     @StateObject var vmAddr = AddressesViewModel()
     @StateObject var vmContr = ContractsViewModel()
     @StateObject var vmMini = MiningViewModel()
-    
-    
     
     @State private var showAlert = false
     
@@ -33,6 +32,7 @@ struct ErgoStatsApp: App {
                     .alert(isPresented: $showAlert) {
                         Alert(title: Text("Error"), message: Text(vmMetrics.error?.localizedDescription ?? ""))
                     }
+                    .environmentObject(network)
                     .environmentObject(vmMetrics)
                     .environmentObject(vm)
                     .environmentObject(vmAddr)

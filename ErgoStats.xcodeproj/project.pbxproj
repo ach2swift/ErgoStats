@@ -27,6 +27,8 @@
 		313815DA299F9B07002C05F0 /* AgeUSDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313815D9299F9B07002C05F0 /* AgeUSDViewModel.swift */; };
 		313815DC299F9BAE002C05F0 /* AgeUsdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313815DB299F9BAE002C05F0 /* AgeUsdView.swift */; };
 		313815DE299FACFE002C05F0 /* AgeUsdCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313815DD299FACFE002C05F0 /* AgeUsdCardView.swift */; };
+		31387B8B29A74512006B8C8A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31387B8A29A74512006B8C8A /* NetworkMonitor.swift */; };
+		31387B8D29A74A0E006B8C8A /* NoInternetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31387B8C29A74A0E006B8C8A /* NoInternetView.swift */; };
 		3157D839299612410077B58E /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157D838299612410077B58E /* VolumeView.swift */; };
 		3157D84029962FEB0077B58E /* RankHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157D83F29962FEB0077B58E /* RankHintView.swift */; };
 		31F6318B298F9A5A00C85000 /* RankCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F6318A298F9A5A00C85000 /* RankCardView.swift */; };
@@ -73,6 +75,8 @@
 		313815D9299F9B07002C05F0 /* AgeUSDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeUSDViewModel.swift; sourceTree = "<group>"; };
 		313815DB299F9BAE002C05F0 /* AgeUsdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeUsdView.swift; sourceTree = "<group>"; };
 		313815DD299FACFE002C05F0 /* AgeUsdCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeUsdCardView.swift; sourceTree = "<group>"; };
+		31387B8A29A74512006B8C8A /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		31387B8C29A74A0E006B8C8A /* NoInternetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetView.swift; sourceTree = "<group>"; };
 		3157D838299612410077B58E /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
 		3157D83F29962FEB0077B58E /* RankHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankHintView.swift; sourceTree = "<group>"; };
 		31F6318A298F9A5A00C85000 /* RankCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCardView.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				31206CE92996513A00D610DB /* FetchError.swift */,
+				31387B8A29A74512006B8C8A /* NetworkMonitor.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				313815DB299F9BAE002C05F0 /* AgeUsdView.swift */,
 				31235F78298D08A8009F7871 /* RichListView.swift */,
 				31F631AA2994CDFC00C85000 /* AboutView.swift */,
+				31387B8C29A74A0E006B8C8A /* NoInternetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 				313815DA299F9B07002C05F0 /* AgeUSDViewModel.swift in Sources */,
 				3157D84029962FEB0077B58E /* RankHintView.swift in Sources */,
 				31235F69298D0657009F7871 /* ContentView.swift in Sources */,
+				31387B8B29A74512006B8C8A /* NetworkMonitor.swift in Sources */,
 				313815D3299E49A3002C05F0 /* DistributionP2PK.swift in Sources */,
 				31206CEA2996513A00D610DB /* FetchError.swift in Sources */,
 				31F631B12994DB6300C85000 /* MinersView.swift in Sources */,
@@ -385,6 +392,7 @@
 				310FC77A299BEAAD00BD5B5C /* AddressesViewModel.swift in Sources */,
 				31F631A22992A78000C85000 /* MetricsView.swift in Sources */,
 				31F631952992284F00C85000 /* SplashScreenView.swift in Sources */,
+				31387B8D29A74A0E006B8C8A /* NoInternetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
