@@ -20,7 +20,7 @@ struct SplashScreenView: View {
                 ContentView()
             } else {
                 NoInternetView()
-            }
+            } 
         } else {
             ZStack {
                 VStack {
