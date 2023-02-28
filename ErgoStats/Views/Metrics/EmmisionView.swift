@@ -14,7 +14,7 @@ struct EmmisionView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 22) {
-                Text("Emmision")
+                Text("Emission")
                     .font(.system(size: 22))
                     .fontWeight(.bold)
                 // .foregroundColor(.white)
