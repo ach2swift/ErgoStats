@@ -29,7 +29,7 @@ struct TransactionsView: View {
                         y: .value("Volume", $0.vol)
                     )
                     .accessibilityLabel($0.date.formatted(date: .abbreviated, time: .omitted))
-                    .accessibilityValue("\($0.vol) ERG")
+                    .accessibilityValue("\($0.vol)")
                     .lineStyle(StrokeStyle(lineWidth: lineWidth))
                     .foregroundStyle(chartColor.gradient)
                     .symbol(Circle().strokeBorder(lineWidth: lineWidth))
@@ -78,7 +78,7 @@ struct TransactionsView: View {
                                     Text("\(selectedElement.date, format: .dateTime.year().month().day())")
                                         .font(.callout)
                                         .foregroundStyle(.secondary)
-                                    Text("\(selectedElement.vol, format: .number) ERG")
+                                    Text("\(selectedElement.vol, format: .number)")
                                         .font(.title2.bold())
                                         .foregroundColor(.primary)
                                 }
