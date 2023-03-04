@@ -1,6 +1,8 @@
 # ErgoStats
 iOS app designed for ERGO blockchain. Stay up to date with the latest statistics
 
+[Available on AppStore](https://apps.apple.com/ro/app/ergo-stats/id1672931450?platform=iphone)
+
 ![IMG_2686](https://user-images.githubusercontent.com/98321425/220033597-c955c5e0-cdc7-4b35-be04-4f441686d5cb.JPG)
 
 **Features**
