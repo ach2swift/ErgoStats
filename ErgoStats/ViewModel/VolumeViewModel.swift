@@ -11,6 +11,9 @@ import Foundation
     @Published var volumeItems = [VolumeItem]()
     @Published var error: Error?
     
+    let savePath = FileManager.documentDirectory.appendingPathComponent("VOLUME")
+
+    
     init() {
         loadData()
     }
@@ -32,8 +35,25 @@ import Foundation
                     .init(date: result.timestamps[index].toDateFromUnixTimestamp(), vol: result.daily1D[index].fromNanoToErg())
                 )
             }
+            save()
         } catch {
             self.error = error
+            do {
+                let data = try Data(contentsOf: savePath)
+                volumeItems = try JSONDecoder().decode([VolumeItem].self, from: data)
+            } catch {
+                volumeItems = []
+                print("Unable to decode JSON")
+            }
+        }
+    }
+    
+    func save() {
+        do {
+            let data = try JSONEncoder().encode(volumeItems)
+            try data.write(to: savePath, options: [.atomicWrite, .completeFileProtection])
+        } catch {
+            print("Unable to save data")
         }
     }
     

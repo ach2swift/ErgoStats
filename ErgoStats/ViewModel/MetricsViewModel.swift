@@ -9,6 +9,17 @@ import Foundation
 import SwiftUI
 
 @MainActor class MetricsViewModel: ObservableObject {
+    
+    let savePathSDC = FileManager.documentDirectory.appendingPathComponent("SDC")
+    let savePathSD = FileManager.documentDirectory.appendingPathComponent("SD")
+//    let savePathSupply = FileManager.documentDirectory.appendingPathComponent("SUPPLY")
+    let savePathSumP2PK = FileManager.documentDirectory.appendingPathComponent("SUMP2PK")
+    let savePathSumContr = FileManager.documentDirectory.appendingPathComponent("SUMCONTR")
+    let savePathSumMin = FileManager.documentDirectory.appendingPathComponent("SUMMIN")
+    let savePathSumTrans = FileManager.documentDirectory.appendingPathComponent("SUMTRANS")
+    let savePathSumVol = FileManager.documentDirectory.appendingPathComponent("SUMVOL")
+    let savePathSumUTXO = FileManager.documentDirectory.appendingPathComponent("SUMUTXO")
+    
     @Published var supply = ""
     
     @Published var summaryP2pk = [SummaryAddresses]()
@@ -69,6 +80,26 @@ extension MetricsViewModel {
             try await fetchSupplDistrContracts()
         }
     }
+
+    
+    // Generic function to encode the array as JSON
+    func save<T: Encodable>(items: [T], to path: URL) {
+        do {
+            let data = try JSONEncoder().encode(items)
+            try data.write(to: path, options: [.atomicWrite, .completeFileProtection])
+        } catch {
+            print("Unable to save data")
+        }
+    }
+    
+    func saveSupply(distribution: SupplyDistribution, to path: URL) {
+        do {
+            let data = try JSONEncoder().encode(distribution)
+            try data.write(to: path, options: [.atomicWrite, .completeFileProtection])
+        } catch {
+            print("Unable to save data")
+        }
+    }
     
     @MainActor
     func fetchSupplDistrContracts() async throws {
@@ -82,8 +113,19 @@ extension MetricsViewModel {
             
             self.summarySupplyContracts = result
             self.summarySupplyContrProc = String(format: "%.2f", result.relative[0].current * 100 )
+            
+            saveSupply(distribution: summarySupplyContracts, to: savePathSDC)
         } catch {
             self.error = error
+            do {
+                let data = try Data(contentsOf: savePathSDC)
+                summarySupplyContracts = try JSONDecoder().decode(SupplyDistribution.self, from: data)
+                summarySupplyContrProc = String(format: "%.2f", summarySupplyContracts.relative[0].current * 100 )
+            } catch {
+                summarySupplyContracts = SupplyDistribution(absolute: [], relative: [])
+                summarySupplyContrProc = ""
+                print("Unable to decode JSON")
+            }
         }
     }
     
@@ -99,8 +141,19 @@ extension MetricsViewModel {
             
             self.summarySupplyP2pk = result
             self.summarySupplyP2pkProc = String(format: "%.2f", result.relative[0].current * 100 )
+            
+            saveSupply(distribution: summarySupplyP2pk, to: savePathSD)
         } catch {
             self.error = error
+            do {
+                let data = try Data(contentsOf: savePathSD)
+                summarySupplyP2pk = try JSONDecoder().decode(SupplyDistribution.self, from: data)
+                summarySupplyP2pkProc = String(format: "%.2f", summarySupplyP2pk.relative[0].current * 100 )
+            } catch {
+                summarySupplyP2pk = SupplyDistribution(absolute: [], relative: [])
+                summarySupplyP2pkProc = ""
+                print("Unable to decode JSON")
+            }
         }
     }
     
@@ -116,9 +169,19 @@ extension MetricsViewModel {
             await MainActor.run {
                 self.summaryUTXO = result
                 self.utxos = result[0].current.abbreviated()
+                save(items: summaryUTXO, to: savePathSumUTXO)
             }
         } catch {
             self.error = error
+            do {
+                let data = try Data(contentsOf: savePathSumUTXO)
+                summaryUTXO = try JSONDecoder().decode([SummaryUsage].self, from: data)
+                utxos = summaryUTXO[0].current.abbreviated()
+            } catch {
+                summaryUTXO = [SummaryUsage]()
+                utxos = "n/a"
+                print("Unable to decode JSON")
+            }
         }
     }
     
@@ -134,8 +197,20 @@ extension MetricsViewModel {
             
             self.summaryVolume = result
             self.transferVolume = Int(result[0].current / 1_000_000_000).abbreviated()
+            
+            save(items: summaryVolume, to: savePathSumVol)
+
         } catch {
             self.error = error
+            do {
+                let data = try Data(contentsOf: savePathSumVol)
+                summaryVolume = try JSONDecoder().decode([SummaryUsage].self, from: data)
+                transferVolume = Int(summaryVolume[0].current / 1_000_000_000).abbreviated()
+            } catch {
+                summaryVolume = [SummaryUsage]()
+                transferVolume = "n/a"
+                print("Unable to decode JSON")
+            }
         }
     }
     
@@ -151,8 +226,20 @@ extension MetricsViewModel {
             
             self.summaryTransaction = result
             self.transactions = result[0].current.abbreviated()
+            
+            save(items: summaryTransaction, to: savePathSumTrans)
+
         } catch {
             self.error = error
+            do {
+                let data = try Data(contentsOf: savePathSumTrans)
+                summaryTransaction = try JSONDecoder().decode([SummaryUsage].self, from: data)
+                transactions = summaryTransaction[0].current.abbreviated()
+            } catch {
+                summaryTransaction = [SummaryUsage]()
+                transactions = "n/a"
+                print("Unable to decode JSON")
+            }
         }
     }
     
@@ -168,8 +255,20 @@ extension MetricsViewModel {
             
             self.summaryMiners = result
             self.miningContracts = result[0].current.abbreviated()
+            
+            save(items: summaryMiners, to: savePathSumMin)
+
         } catch {
             self.error = error
+            do {
+                let data = try Data(contentsOf: savePathSumMin)
+                summaryMiners = try JSONDecoder().decode([SummaryAddresses].self, from: data)
+                miningContracts = summaryMiners[0].current.abbreviated()
+            } catch {
+                summaryMiners = [SummaryAddresses]()
+                miningContracts = "n/a"
+                print("Unable to decode JSON")
+            }
         }
     }
     
@@ -185,8 +284,20 @@ extension MetricsViewModel {
             
             self.summaryContracts = result
             self.contracts = result[0].current.abbreviated()
+            
+            save(items: summaryContracts, to: savePathSumContr)
+
         } catch {
             self.error = error
+            do {
+                let data = try Data(contentsOf: savePathSumContr)
+                summaryContracts = try JSONDecoder().decode([SummaryAddresses].self, from: data)
+                contracts = summaryContracts[0].current.abbreviated()
+            } catch {
+                summaryContracts = [SummaryAddresses]()
+                contracts = "n/a"
+                print("Unable to decode JSON")
+            }
         }
     }
     
@@ -203,10 +314,22 @@ extension MetricsViewModel {
             await MainActor.run {
                 self.summaryP2pk = result
                 self.totalP2PK = result[0].current.abbreviated()
+                
+                save(items: summaryP2pk, to: savePathSumP2PK)
+
             }
             
         } catch {
             self.error = error
+            do {
+                let data = try Data(contentsOf: savePathSumP2PK)
+                summaryP2pk = try JSONDecoder().decode([SummaryAddresses].self, from: data)
+                totalP2PK = summaryP2pk[0].current.abbreviated()
+            } catch {
+                summaryP2pk = [SummaryAddresses]()
+                totalP2PK = "n/a"
+                print("Unable to decode JSON")
+            }
         }
     }
     

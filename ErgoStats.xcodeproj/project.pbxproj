@@ -31,6 +31,7 @@
 		31387B8D29A74A0E006B8C8A /* NoInternetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31387B8C29A74A0E006B8C8A /* NoInternetView.swift */; };
 		3157D839299612410077B58E /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157D838299612410077B58E /* VolumeView.swift */; };
 		3157D84029962FEB0077B58E /* RankHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3157D83F29962FEB0077B58E /* RankHintView.swift */; };
+		31CC1A8329B0E6EC00E79FD1 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CC1A8229B0E6EC00E79FD1 /* FileManager.swift */; };
 		31F6318B298F9A5A00C85000 /* RankCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F6318A298F9A5A00C85000 /* RankCardView.swift */; };
 		31F6318D298FA19100C85000 /* RankLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F6318C298FA19100C85000 /* RankLegendView.swift */; };
 		31F6318F29921FBC00C85000 /* RichListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F6318E29921FBC00C85000 /* RichListViewModel.swift */; };
@@ -79,6 +80,7 @@
 		31387B8C29A74A0E006B8C8A /* NoInternetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetView.swift; sourceTree = "<group>"; };
 		3157D838299612410077B58E /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
 		3157D83F29962FEB0077B58E /* RankHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankHintView.swift; sourceTree = "<group>"; };
+		31CC1A8229B0E6EC00E79FD1 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		31F6318A298F9A5A00C85000 /* RankCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCardView.swift; sourceTree = "<group>"; };
 		31F6318C298FA19100C85000 /* RankLegendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankLegendView.swift; sourceTree = "<group>"; };
 		31F6318E29921FBC00C85000 /* RichListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichListViewModel.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				31206CE92996513A00D610DB /* FetchError.swift */,
 				31387B8A29A74512006B8C8A /* NetworkMonitor.swift */,
+				31CC1A8229B0E6EC00E79FD1 /* FileManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				31F631B72995181C00C85000 /* TransactionsView.swift in Sources */,
 				310FC77C299D426C00BD5B5C /* ContractsViewModel.swift in Sources */,
 				313815CE299D4A79002C05F0 /* MiningViewModel.swift in Sources */,
+				31CC1A8329B0E6EC00E79FD1 /* FileManager.swift in Sources */,
 				310FC776299B4F6100BD5B5C /* TransactionsViewModel.swift in Sources */,
 				31F631A42992A8D800C85000 /* MetricsViewModel.swift in Sources */,
 				31235F80298D0E5D009F7871 /* RankView.swift in Sources */,
@@ -535,7 +539,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alinchitas.ErgoStats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -566,7 +570,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alinchitas.ErgoStats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

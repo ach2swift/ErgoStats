@@ -11,6 +11,9 @@ import Foundation
     @Published var transactionItems = [TransactionItem]()
     @Published var error: Error?
     
+    let savePath = FileManager.documentDirectory.appendingPathComponent("TRANSAC")
+
+    
     init() {
         loadData()
     }
@@ -33,8 +36,25 @@ import Foundation
                     .init(date: result.timestamps[index].toDateFromUnixTimestamp(), vol: result.daily1D[index])
                 )
             }
+            save()
         } catch {
             self.error = error
+            do {
+                let data = try Data(contentsOf: savePath)
+                transactionItems = try JSONDecoder().decode([TransactionItem].self, from: data)
+            } catch {
+                transactionItems = []
+                print("Unable to decode JSON")
+            }
+        }
+    }
+    
+    func save() {
+        do {
+            let data = try JSONEncoder().encode(transactionItems)
+            try data.write(to: savePath, options: [.atomicWrite, .completeFileProtection])
+        } catch {
+            print("Unable to save data")
         }
     }
     

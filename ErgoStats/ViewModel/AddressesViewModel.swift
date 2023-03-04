@@ -11,6 +11,9 @@ import Foundation
     @Published var addresses = [AddressesItem]()
     @Published var error: Error?
     
+    let savePath = FileManager.documentDirectory.appendingPathComponent("ADDRESSES")
+    
+    
     init() {
         loadData()
     }
@@ -33,8 +36,25 @@ import Foundation
                     .init(date: result.timestamps[index].toDateFromUnixTimestamp(), ge1: result.ge_1[index])
                 )
             }
+            save()
         } catch {
             self.error = error
+            do {
+                let data = try Data(contentsOf: savePath)
+                addresses = try JSONDecoder().decode([AddressesItem].self, from: data)
+            } catch {
+                addresses = []
+                print("Unable to decode JSON")
+            }
+        }
+    }
+    
+    func save() {
+        do {
+            let data = try JSONEncoder().encode(addresses)
+            try data.write(to: savePath, options: [.atomicWrite, .completeFileProtection])
+        } catch {
+            print("Unable to save data")
         }
     }
     

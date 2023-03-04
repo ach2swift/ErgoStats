@@ -11,6 +11,9 @@ import Foundation
     @Published var miners = [MiningItem]()
     @Published var error: Error?
     
+    let savePath = FileManager.documentDirectory.appendingPathComponent("MINING")
+
+    
     init() {
         loadData()
     }
@@ -33,8 +36,26 @@ import Foundation
                     .init(date: result.timestamps[index].toDateFromUnixTimestamp(), ge1: result.ge_1[index])
                 )
             }
+            save()
+
         } catch {
             self.error = error
+            do {
+                let data = try Data(contentsOf: savePath)
+                miners = try JSONDecoder().decode([MiningItem].self, from: data)
+            } catch {
+                miners = []
+                print("Unable to decode JSON")
+            }
+        }
+    }
+    
+    func save() {
+        do {
+            let data = try JSONEncoder().encode(miners)
+            try data.write(to: savePath, options: [.atomicWrite, .completeFileProtection])
+        } catch {
+            print("Unable to save data")
         }
     }
     

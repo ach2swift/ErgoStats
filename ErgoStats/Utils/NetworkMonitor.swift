@@ -16,8 +16,9 @@ import Network
     
     init() {
         monitor.pathUpdateHandler = { path in
-                self.isActive = path.status == .satisfied
+//                self.isActive = path.status == .satisfied
             DispatchQueue.main.async {
+                self.isActive = path.status == .satisfied
                 self.objectWillChange.send()
             }
         }

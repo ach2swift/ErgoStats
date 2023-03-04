@@ -11,6 +11,8 @@ import Foundation
     @Published var contracts = [ContractsItem]()
     @Published var error: Error?
     
+    let savePath = FileManager.documentDirectory.appendingPathComponent("CONTRACTS")
+    
     init() {
         loadData()
     }
@@ -33,8 +35,26 @@ import Foundation
                     .init(date: result.timestamps[index].toDateFromUnixTimestamp(), ge1: result.ge_1[index])
                 )
             }
+            save()
+
         } catch {
             self.error = error
+            do {
+                let data = try Data(contentsOf: savePath)
+                contracts = try JSONDecoder().decode([ContractsItem].self, from: data)
+            } catch {
+                contracts = []
+                print("Unable to decode JSON")
+            }
+        }
+    }
+    
+    func save() {
+        do {
+            let data = try JSONEncoder().encode(contracts)
+            try data.write(to: savePath, options: [.atomicWrite, .completeFileProtection])
+        } catch {
+            print("Unable to save data")
         }
     }
     

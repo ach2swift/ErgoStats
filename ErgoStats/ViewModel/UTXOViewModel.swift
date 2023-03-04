@@ -11,6 +11,9 @@ import Foundation
     @Published var utxos = [UTXOItem]()
     @Published var error: Error?
     
+    let savePath = FileManager.documentDirectory.appendingPathComponent("UTXO")
+
+    
     init() {
         loadData()
     }
@@ -33,8 +36,26 @@ import Foundation
                     .init(date: result.timestamps[index].toDateFromUnixTimestamp(), utxo: result.values[index])
                 )
             }
+            save()
+
         } catch {
             self.error = error
+            do {
+                let data = try Data(contentsOf: savePath)
+                utxos = try JSONDecoder().decode([UTXOItem].self, from: data)
+            } catch {
+                utxos = []
+                print("Unable to decode JSON")
+            }
+        }
+    }
+    
+    func save() {
+        do {
+            let data = try JSONEncoder().encode(utxos)
+            try data.write(to: savePath, options: [.atomicWrite, .completeFileProtection])
+        } catch {
+            print("Unable to save data")
         }
     }
     
